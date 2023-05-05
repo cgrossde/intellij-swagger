@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 public class SwaggerFilesUtils {
 
   public static Url convertSwaggerLocationToUrl(@NotNull final Path swaggerHtmlDirectory) {
-    return new LocalFileUrl(swaggerHtmlDirectory.toString() + File.separator + "index.html");
+    return Urls.newUri ("file", (swaggerHtmlDirectory + File.separator + "index.html");
   }
 
   public static boolean isFileReference(final String text) {
